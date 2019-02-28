@@ -1,7 +1,17 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: mediumturquoise;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
 /*---------------- GRID ---------------*/
 .clearfix::after, .clearfix::before {
     content: " ";
@@ -22,18 +32,119 @@
 .col-12 {width: 100%;}
 
 /* ------------------- Header ------------------- */
-header {
+nav {
     background-color: cadetblue;
 }
-nav {
-    background-color: blue;
+nav>div {
+
     min-height: 50px;
+
 }
-.container {
-    margin: 0 auto;
+#logo {
+    float: left;
+    color: white;
+
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav ul {
+    list-style: none;
+    float: right;
+    line-height: 50px;
+}
+nav ul li {
+    float: left;
+    padding: 0 10px;
+}
+nav ul li:hover {
+    background-color: lightblue;
+    padding: 0 10px;
+    cursor: pointer;
+}
+header {
+    height: 100vh;
+    background-color: mediumpurple;
+    background-image: url("https://via.placeholder.com/2000x350/DCA77A/000000");
+    background-size: cover;
+    background-position: center;
+}
+main {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 20vh;
+    background-color: aliceblue;
+}
+.gallery {
+    margin-top: 20px;
+    background-color: bisque;
+}
+.photo {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    background-color: brown;
+}
+.photo:last-of-type {
+    margin-right: 0;
+    background-color: red;
+    padding: 0;
+}
+.photo img {
+    display: block;
     width: 100%;
-    max-width: 1200px;
+    height: auto;
+    /*margin-bottom: -4px;*/
+
+}
+.map {
+    margin-top: 20px;
+    background-color: lavender;
 }
 footer {
+
     background-color: cadetblue;
+}
+footer>div {
+    line-height: 50px;
+    min-height: 50px;
+    color: white;
+    text-align: center;
+}
+.map img {
+    display: block;
+    width: 100%;
+}
+@media(max-width: 767px) {
+    #logo, .photo, nav ul, nav ul li  {
+        float: none;
+    }
+    #logo, nav ul li {
+        display: block;
+        text-align: center;
+    }
+    #logo {
+        margin: 0 auto;
+    }
+    header {
+        height: 100vh;
+        background-color: mediumpurple;
+        background-image: url("https://via.placeholder.com/768x350/DCA77A/000000");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    main h2 {
+        text-align: center;
+    }
+    main p {
+        text-align: justify;
+        hyphens: auto;
+    }
+    .photo {
+        width: 60%;
+        margin-left: 20%;
+        margin-bottom: 20px;
+    }
 }
