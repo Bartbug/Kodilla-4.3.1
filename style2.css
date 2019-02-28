@@ -5,21 +5,12 @@
 }
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #000;
+    background-color: mediumturquoise;
 }
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-}
-h2 {
-    padding: 20px 0;
-    font-size: 2em;
-    text-align: center;
-}
-p {
-    font-size: 1.2em;
-    line-height: 1.4em;
 }
 /*---------------- GRID ---------------*/
 .clearfix::after, .clearfix::before {
@@ -42,16 +33,14 @@ p {
 
 /* ------------------- Header ------------------- */
 nav {
-    background-color: #000;
+    background-color: cadetblue;
 }
 nav>div {
-    min-height: 100px;
+
+    min-height: 50px;
 
 }
 #logo {
-    display: block;
-    width: auto;
-    height: 100px;
     float: left;
     color: white;
 
@@ -63,27 +52,21 @@ nav a {
 nav ul {
     list-style: none;
     float: right;
-    line-height: 100px;
+    line-height: 50px;
 }
 nav ul li {
-    font-size: 1.5em;
     float: left;
-    padding: 0 20px;
-    background-color: #000;
-    transition: background-color 0.3s linear;
-    -webkit-transition: background-color 0.3s linear;
-    -moz-transition: background-color 0.3s linear;
-    -ms-transition: background-color 0.3s linear;
-    -o-transition: background-color 0.3s linear;
+    padding: 0 10px;
 }
 nav ul li:hover {
-    background-color: #ccc;
-    background-color: rgba(255,255,255,.5);
+    background-color: lightblue;
+    padding: 0 10px;
     cursor: pointer;
 }
 header {
     height: 100vh;
-    background-image: url("https://images.pexels.com/photos/68710/pexels-photo-68710.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-color: mediumpurple;
+    background-image: url("https://via.placeholder.com/2000x350/DCA77A/000000");
     background-size: cover;
     background-position: center;
 }
@@ -91,52 +74,41 @@ main {
     margin-top: 20px;
     padding: 10px;
     min-height: 20vh;
-    color: #fff;
+    background-color: aliceblue;
 }
 .gallery {
     margin-top: 20px;
+    background-color: bisque;
 }
 .photo {
     float: left;
     width: 30%;
     margin-right: 5%;
+    background-color: brown;
 }
 .photo:last-of-type {
     margin-right: 0;
+    background-color: red;
     padding: 0;
 }
 .photo img {
     display: block;
     width: 100%;
     height: auto;
-}
-.map {
-    position: relative;
-    margin-top: 20px;
-}
-.map>div {    
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color:#000;
-    opacity: 0.7;
-    transition: opacity 1s linear;
-    -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;
-    -ms-transition: opacity 1s linear;
-    -o-transition: opacity 1s linear;
-}
-.map>div:hover {    
-    opacity: 0;
+    /*margin-bottom: -4px;*/
 
 }
+.map {
+    margin-top: 20px;
+    background-color: lavender;
+}
 footer {
-    background-color: #000;
+
+    background-color: cadetblue;
 }
 footer>div {
-    line-height: 100px;
-    min-height: 100px;
+    line-height: 50px;
+    min-height: 50px;
     color: white;
     text-align: center;
 }
@@ -151,14 +123,14 @@ footer>div {
     #logo, nav ul li {
         display: block;
         text-align: center;
-        padding: 0;
     }
     #logo {
         margin: 0 auto;
     }
     header {
         height: 100vh;
-        background-image: url("https://images.pexels.com/photos/63695/pexels-photo-63695.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+        background-color: mediumpurple;
+        background-image: url("https://via.placeholder.com/768x350/DCA77A/000000");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -169,15 +141,10 @@ footer>div {
     main p {
         text-align: justify;
         hyphens: auto;
-        padding: 8%;
-        font-size: 1em;
     }
     .photo {
-        width: 82%;
-        margin-left: 8%;
+        width: 60%;
+        margin-left: 20%;
         margin-bottom: 20px;
-    }
-    .map>div {
-        opacity: 0;
     }
 }
