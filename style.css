@@ -3,23 +3,38 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #000;
+    
 }
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
+h1 {
+    text-transform: uppercase;    
+}
 h2 {
     padding: 20px 0;
     font-size: 2em;
     text-align: center;
+    text-transform: capitalize;
 }
 p {
     font-size: 1.2em;
     line-height: 1.4em;
+}
+header a, nav ul li a {
+    color: #fff;
+    background-color: #000;
+    transition: background-color 0.3s linear, color 0.3s linear;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    -moz-transition: background-color 0.3s linear, color 0.3s linear;
+    -ms-transition: background-color 0.3s linear, color 0.3s linear;
+    -o-transition: background-color 0.3s linear, color 0.3s linear;
 }
 /*---------------- GRID ---------------*/
 .clearfix::after, .clearfix::before {
@@ -42,7 +57,11 @@ p {
 
 /* ------------------- Header ------------------- */
 nav {
+    margin-top: -100px;
     background-color: #000;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 nav>div {
     min-height: 100px;
@@ -54,60 +73,108 @@ nav>div {
     height: 100px;
     float: left;
     color: white;
-
+}
+#logo:hover {
+    animation: neon 5s infinite linear; 
 }
 nav a {
+    display: block;
     text-decoration: none;
     color: white;
+    line-height: 100px;
 }
 nav ul {
     list-style: none;
     float: right;
-    line-height: 100px;
 }
 nav ul li {
-    font-size: 1.5em;
     float: left;
-    padding: 0 20px;
-    background-color: #000;
-    transition: background-color 0.3s linear;
-    -webkit-transition: background-color 0.3s linear;
-    -moz-transition: background-color 0.3s linear;
-    -ms-transition: background-color 0.3s linear;
-    -o-transition: background-color 0.3s linear;
 }
-nav ul li:hover {
-    background-color: #ccc;
-    background-color: rgba(255,255,255,.5);
+nav ul li a {
+    padding: 0 20px;
+    font-size: 1.5em;
+}
+nav ul li:hover a {
+    color: #fff;
+    background-color: #222;
     cursor: pointer;
 }
 header {
+    margin-top: 100px;
+    position: relative;
     height: 100vh;
     background-image: url("https://images.pexels.com/photos/68710/pexels-photo-68710.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
     background-size: cover;
     background-position: center;
 }
+header>div>div {
+    display: block;
+    position: absolute;
+    top: 40%;
+    margin-left: -100%;
+    padding: 40px;
+    background-color: lightgrey;
+    background-color: rgba(255,255,255,0.7);
+    text-align: center;
+    transition: margin-left .7s ease-out;
+    -webkit-transition: margin-left .7s ease-out;
+    -moz-transition: margin-left .7s ease-out;
+    -ms-transition: margin-left .7s ease-out;
+    -o-transition: margin-left .7s ease-out;
+}
+header:hover>div>div {
+    margin-left: 0;
+}
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+header a {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    text-transform: lowercase;
+    text-align: center;
+    width: 120px;
+    font-size: 1.4em;
+    font-weight: 500;
+    padding: 8px 12px;
+    text-decoration: none;
+    box-shadow: 0 0 7px #555;
+}
+header a:hover {
+    color: #000;
+    background-color: #aaa;
+}
+
 main {
     margin-top: 20px;
-    padding: 10px;
+    padding: 5%;
     min-height: 20vh;
     color: #fff;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -epub-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
 }
 .gallery {
-    margin-top: 20px;
+    padding: 20px 5% 20px 5%;
 }
 .photo {
     float: left;
     width: 30%;
     margin-right: 5%;
+    background-color: red;
 }
 .photo:last-of-type {
     margin-right: 0;
-    padding: 0;
 }
 .photo img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 .map {
@@ -144,7 +211,31 @@ footer>div {
     display: block;
     width: 100%;
 }
+
+@media(min-width: 768px) and (max-width: 1199px) {
+
+
+    nav ul li a {
+        padding: 0 10px;
+        font-size: 1.5em;
+    }
+    nav ul {
+        margin-right: 10px;
+    }
+    header a {
+        margin: 20px auto 0 auto;
+        display: block;
+        clear: both;
+    }
+    
+}
+
+
 @media(max-width: 767px) {
+    nav {
+        position: static;
+        margin-top: 0;
+        }
     #logo, .photo, nav ul, nav ul li  {
         float: none;
     }
@@ -157,15 +248,23 @@ footer>div {
         margin: 0 auto;
     }
     header {
+        margin-top: 0;
         height: 100vh;
         background-image: url("https://images.pexels.com/photos/63695/pexels-photo-63695.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
-    main h2 {
-        text-align: center;
+    header>div>div {
+        width: 100vw;
+        margin-left: auto;
     }
+    header a {
+        margin: 20px auto 0 auto;
+        display: block;
+        width: 150px;
+    }
+
     main p {
         text-align: justify;
         hyphens: auto;
@@ -175,9 +274,41 @@ footer>div {
     .photo {
         width: 82%;
         margin-left: 8%;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
+    .photo:last-of-type {
+        margin-bottom: 0;
+    }
+    
     .map>div {
         opacity: 0;
     }
+    
+}
+@keyframes neon {
+    0% {filter: drop-shadow(0 0 10px cyan);}
+    1% {filter: drop-shadow(0 0 0 cyan);}
+    2% {filter: drop-shadow(0 0 0 cyan);}
+    3% {filter: drop-shadow(0 0 0 cyan);}
+    4% {filter: drop-shadow(0 0 10px cyan);}
+    5% {filter: drop-shadow(0 0 0 cyan);}
+    6% {filter: drop-shadow(0 0 10px cyan);}
+    7% {filter: drop-shadow(0 0 10px cyan);}
+    8% {filter: drop-shadow(0 0 10px cyan);}
+    9% {filter: drop-shadow(0 0 10px cyan);}
+    10% {filter: drop-shadow(0 0 10px cyan);}
+    11% {filter: drop-shadow(0 0 0 cyan);}
+    12% {filter: drop-shadow(0 0 10px cyan);}
+    13% {filter: drop-shadow(0 0 0 cyan);}
+    14% {filter: drop-shadow(0 0 0 cyan);}
+    15% {filter: drop-shadow(0 0 0 cyan);}
+    16% {filter: drop-shadow(0 0 0 cyan);}
+    17% {filter: drop-shadow(0 0 0 cyan);}
+    18% {filter: drop-shadow(0 0 0 cyan);}
+    19% {filter: drop-shadow(0 0 10px cyan);}
+    20% {filter: drop-shadow(0 0 0 cyan);}
+    21% {filter: drop-shadow(0 0 10px cyan);}
+    50% {filter: drop-shadow(0 0 10px cyan);}
+    51% {filter: drop-shadow(0 0 0 cyan);}
+    100% {filter: drop-shadow(0 0 0 cyan);}
 }
