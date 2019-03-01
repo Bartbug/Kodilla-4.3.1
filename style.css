@@ -7,26 +7,30 @@
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #000;
-    
 }
+
 .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
+
 h1 {
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
+
 h2 {
     padding: 20px 0;
     font-size: 2em;
     text-align: center;
     text-transform: capitalize;
 }
+
 p {
     font-size: 1.2em;
     line-height: 1.4em;
 }
+
 header a, nav ul li a {
     color: #fff;
     background-color: #000;
@@ -36,26 +40,65 @@ header a, nav ul li a {
     -ms-transition: background-color 0.3s linear, color 0.3s linear;
     -o-transition: background-color 0.3s linear, color 0.3s linear;
 }
+
 /*---------------- GRID ---------------*/
+
 .clearfix::after, .clearfix::before {
     content: " ";
     display: table;
     clear: both;
 }
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
 
 /* ------------------- Header ------------------- */
+
 nav {
     margin-top: -100px;
     background-color: #000;
@@ -63,10 +106,11 @@ nav {
     z-index: 100;
     width: 100%;
 }
+
 nav>div {
     min-height: 100px;
-
 }
+
 #logo {
     display: block;
     width: auto;
@@ -74,31 +118,38 @@ nav>div {
     float: left;
     color: white;
 }
+
 #logo:hover {
-    animation: neon 5s infinite linear; 
+    animation: neon 5s infinite linear;
 }
+
 nav a {
     display: block;
     text-decoration: none;
     color: white;
     line-height: 100px;
 }
+
 nav ul {
     list-style: none;
     float: right;
 }
+
 nav ul li {
     float: left;
 }
+
 nav ul li a {
     padding: 0 20px;
     font-size: 1.5em;
 }
+
 nav ul li:hover a {
     color: #fff;
     background-color: #222;
     cursor: pointer;
 }
+
 header {
     margin-top: 100px;
     position: relative;
@@ -107,6 +158,7 @@ header {
     background-size: cover;
     background-position: center;
 }
+
 header>div>div {
     display: block;
     position: absolute;
@@ -114,7 +166,7 @@ header>div>div {
     margin-left: -100%;
     padding: 40px;
     background-color: lightgrey;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
     transition: margin-left .7s ease-out;
     -webkit-transition: margin-left .7s ease-out;
@@ -122,13 +174,16 @@ header>div>div {
     -ms-transition: margin-left .7s ease-out;
     -o-transition: margin-left .7s ease-out;
 }
+
 header:hover>div>div {
     margin-left: 0;
 }
+
 header h1 {
     display: inline-block;
     vertical-align: middle;
 }
+
 header a {
     display: inline-block;
     margin-left: 20px;
@@ -142,6 +197,7 @@ header a {
     text-decoration: none;
     box-shadow: 0 0 7px #555;
 }
+
 header a:hover {
     color: #000;
     background-color: #aaa;
@@ -160,33 +216,39 @@ main {
     -ms-hyphens: auto;
     -o-hyphens: auto;
 }
+
 .gallery {
     padding: 20px 5% 20px 5%;
 }
+
 .photo {
     float: left;
     width: 30%;
     margin-right: 5%;
     background-color: red;
 }
+
 .photo:last-of-type {
     margin-right: 0;
 }
+
 .photo img {
     display: block;
     max-width: 100%;
     height: auto;
 }
+
 .map {
     position: relative;
     margin-top: 20px;
 }
-.map>div {    
+
+.map>div {
     display: block;
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color:#000;
+    background-color: #000;
     opacity: 0.7;
     transition: opacity 1s linear;
     -webkit-transition: opacity 1s linear;
@@ -194,27 +256,28 @@ main {
     -ms-transition: opacity 1s linear;
     -o-transition: opacity 1s linear;
 }
-.map>div:hover {    
-    opacity: 0;
 
+.map>div:hover {
+    opacity: 0;
 }
+
 footer {
     background-color: #000;
 }
+
 footer>div {
     line-height: 100px;
     min-height: 100px;
     color: white;
     text-align: center;
 }
+
 .map img {
     display: block;
     width: 100%;
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
-
-
     nav ul li a {
         padding: 0 10px;
         font-size: 1.5em;
@@ -227,16 +290,14 @@ footer>div {
         display: block;
         clear: both;
     }
-    
 }
-
 
 @media(max-width: 767px) {
     nav {
         position: static;
         margin-top: 0;
-        }
-    #logo, .photo, nav ul, nav ul li  {
+    }
+    #logo, .photo, nav ul, nav ul li {
         float: none;
     }
     #logo, nav ul li {
@@ -264,7 +325,6 @@ footer>div {
         display: block;
         width: 150px;
     }
-
     main p {
         text-align: justify;
         hyphens: auto;
@@ -279,36 +339,85 @@ footer>div {
     .photo:last-of-type {
         margin-bottom: 0;
     }
-    
     .map>div {
         opacity: 0;
     }
-    
 }
+
 @keyframes neon {
-    0% {filter: drop-shadow(0 0 10px cyan);}
-    1% {filter: drop-shadow(0 0 0 cyan);}
-    2% {filter: drop-shadow(0 0 0 cyan);}
-    3% {filter: drop-shadow(0 0 0 cyan);}
-    4% {filter: drop-shadow(0 0 10px cyan);}
-    5% {filter: drop-shadow(0 0 0 cyan);}
-    6% {filter: drop-shadow(0 0 10px cyan);}
-    7% {filter: drop-shadow(0 0 10px cyan);}
-    8% {filter: drop-shadow(0 0 10px cyan);}
-    9% {filter: drop-shadow(0 0 10px cyan);}
-    10% {filter: drop-shadow(0 0 10px cyan);}
-    11% {filter: drop-shadow(0 0 0 cyan);}
-    12% {filter: drop-shadow(0 0 10px cyan);}
-    13% {filter: drop-shadow(0 0 0 cyan);}
-    14% {filter: drop-shadow(0 0 0 cyan);}
-    15% {filter: drop-shadow(0 0 0 cyan);}
-    16% {filter: drop-shadow(0 0 0 cyan);}
-    17% {filter: drop-shadow(0 0 0 cyan);}
-    18% {filter: drop-shadow(0 0 0 cyan);}
-    19% {filter: drop-shadow(0 0 10px cyan);}
-    20% {filter: drop-shadow(0 0 0 cyan);}
-    21% {filter: drop-shadow(0 0 10px cyan);}
-    50% {filter: drop-shadow(0 0 10px cyan);}
-    51% {filter: drop-shadow(0 0 0 cyan);}
-    100% {filter: drop-shadow(0 0 0 cyan);}
+    0% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    1% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    2% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    3% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    4% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    5% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    6% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    7% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    8% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    9% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    10% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    11% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    12% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    13% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    14% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    15% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    16% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    17% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    18% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    19% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    20% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    21% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px cyan);
+    }
+    51% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
+    100% {
+        filter: drop-shadow(0 0 0 cyan);
+    }
 }
